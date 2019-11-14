@@ -1,0 +1,131 @@
+h1 {
+    font-size: 20px;
+}
+.header {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: hsl(0, 0%, 70%);
+    padding: 5px;
+}
+
+.page_header_content {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: hsl(210, 50%, 70%);
+    /* margin: 5px; */
+}
+.h-child {
+    box-sizing: border-box;
+    height: 1.5em;
+    background-color: hsl(210, 50%, 85%);
+    margin: 5px;
+    text-align: center;
+}
+.h-child-1 {
+    flex: 1 1 500px;
+}
+.h-child-2 {
+    flex: 1 1 150px;
+}
+.h-child-3 {
+    flex: 1 1 150px;
+}
+.main-container {
+    box-sizing: border-box;
+}
+.m-child {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: hsl(0, 0%, 70%);
+    padding: 5px;
+    margin: 5px 0px;
+}
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: hsl(0, 0%, 70%);
+    padding: 5px;
+    margin: 5px 0px;
+}
+.heading-container {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: hsl(210, 50%, 70%);
+    padding: 5px;
+}
+.hero-child1 {
+    display: none;
+}
+.Hero {
+    grid-area: H;
+}
+.Rekl {
+    grid-area: R;
+}
+.Body {
+    grid-area: B;
+}
+.Sidebar {
+    grid-area: S;
+}
+.Footer {
+    grid-area: F;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "H"
+    "B"
+    "F"
+}
+.Sidebar, .Rekl {
+    display: none;
+}
+@media screen and (min-width: 576px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "H"
+        "B"
+        "S"
+        "F"
+    }
+    .Sidebar, .hero-child1 {
+        display: block;
+    }
+    .h-child-1 {
+        flex: 1 1 15%;
+    }
+    .h-child-2 {
+        flex: 1 1 50%;
+    }
+    .h-child-3 {
+        flex: 1 1 20%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: repeat(12 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "H H H H H H H H H R R R"
+        "B B B B B B B B B S S S"
+        "F F F F F F F F F F F F "
+    }
+    .Sidebar {
+        display: block;
+    }
+    .Rekl {
+        display: block;
+    }
+    .body-child2 {
+        display: none;
+    }
+  }
