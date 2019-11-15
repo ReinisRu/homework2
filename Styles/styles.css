@@ -1,11 +1,11 @@
-h1 {
+h1, h2 {
     font-size: 20px;
 }
 .header {
     box-sizing: border-box;
     width: 100%;
     background-color: hsl(0, 0%, 70%);
-    padding: 5px;
+    margin: 5px 0px;
 }
 
 .page_header_content {
@@ -13,11 +13,11 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     background-color: hsl(210, 50%, 70%);
-    /* margin: 5px; */
 }
-.h-child {
+.text-cont {
     box-sizing: border-box;
-    height: 1.5em;
+    display: flex;
+    height: auto;
     background-color: hsl(210, 50%, 85%);
     margin: 5px;
     text-align: center;
@@ -38,7 +38,6 @@ h1 {
     box-sizing: border-box;
     width: 100%;
     background-color: hsl(0, 0%, 70%);
-    padding: 5px;
     margin: 5px 0px;
 }
 footer {
@@ -51,9 +50,16 @@ footer {
 .heading-container {
     box-sizing: border-box;
     width: 100%;
+    height: auto;
     background-color: hsl(210, 50%, 70%);
     padding: 5px;
 }
+/* .hero-main-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: hsl(210, 50%, 70%);
+} */
 .hero-child1 {
     display: none;
 }
@@ -112,8 +118,9 @@ footer {
   @media screen and (min-width: 992px) {
     .main-container {
         display: grid;
-        grid-template-columns: repeat(12 1fr);
+        grid-template-columns: repeat(12,1fr);
         grid-template-rows: auto;
+        column-gap: 8px;
         grid-template-areas:
         "H H H H H H H H H R R R"
         "B B B B B B B B B S S S"
